@@ -131,6 +131,53 @@
         display: none;
     }
 
+    /* Mobile Dropdown Styles */
+    .nav-dropdown {
+        position: relative;
+    }
+
+    .dropdown-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        border: none;
+        padding: 0;
+        margin: 0;
+        background-color: var(--bg-light);
+        border-radius: 0;
+        margin-top: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    .nav-dropdown.active .dropdown-menu {
+        max-height: 500px;
+        padding: var(--space-2) 0;
+    }
+
+    .dropdown-menu li {
+        border-bottom: none;
+        padding-left: var(--space-4);
+    }
+
+    .dropdown-menu a {
+        padding: var(--space-3) var(--space-4);
+        font-size: 0.9375rem;
+        color: var(--text-light);
+    }
+
+    .dropdown-arrow {
+        float: right;
+        transition: transform 0.3s ease;
+    }
+
+    .nav-dropdown.active .dropdown-arrow {
+        transform: rotate(180deg);
+    }
+
     .cta-button {
         width: 100%;
         text-align: center;
@@ -252,6 +299,45 @@
     .location-content {
         grid-template-columns: 1fr;
         gap: var(--space-8);
+    }
+
+    /* New page sections */
+    .benefits-grid,
+    .steps-grid,
+    .audience-grid,
+    .testimonials-grid,
+    .coaches-grid,
+    .transformation-grid,
+    .results-grid,
+    .packages-grid,
+    .services-grid,
+    .discounts-grid,
+    .instructions-grid,
+    .process-steps,
+    .contact-grid,
+    .hours-grid,
+    .blog-grid,
+    .categories-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-6);
+    }
+
+    .trial-features,
+    .foundations-features {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-ctas {
+        flex-direction: column;
+    }
+
+    .hero-ctas .btn {
+        width: 100%;
+    }
+
+    .trust-markers {
+        flex-direction: column;
+        gap: var(--space-4);
     }
 
     .about-content {

@@ -20,6 +20,18 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
+        // Mobile Dropdown Toggle
+        const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+        dropdownToggles.forEach(toggle => {
+            toggle.addEventListener('click', function(e) {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    const dropdown = this.closest('.nav-dropdown');
+                    dropdown.classList.toggle('active');
+                }
+            });
+        });
+
         // Close menu when clicking on a link
         const navLinks = navMenu.querySelectorAll('a');
         navLinks.forEach(link => {
@@ -138,6 +150,40 @@ document.addEventListener('DOMContentLoaded', function() {
         iframe.style.opacity = '0';
         iframe.style.transition = 'opacity 0.3s ease';
     });
+
+    // FAQ Accordion
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', function() {
+            const faqItem = this.closest('.faq-item');
+            const isActive = faqItem.classList.contains('active');
+            
+            // Close all FAQ items
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+                item.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+            });
+            
+            // Open clicked item if it wasn't active
+            if (!isActive) {
+                faqItem.classList.add('active');
+                this.setAttribute('aria-expanded', 'true');
+            }
+        });
+    });
+
+    // Sticky CTA button (optional enhancement)
+    const ctaButton = document.querySelector('.cta-button');
+    if (ctaButton) {
+        let lastScrollTop = 0;
+        window.addEventListener('scroll', function() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > 300 && scrollTop > lastScrollTop) {
+                // Scrolling down - could add sticky behavior here if needed
+            }
+            lastScrollTop = scrollTop;
+        });
+    }
 
     // Console message for developers
     console.log('%cWasatch CrossFit', 'color: #e63946; font-size: 20px; font-weight: bold;');

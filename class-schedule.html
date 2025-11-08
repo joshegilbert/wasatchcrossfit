@@ -39,11 +39,28 @@
                     <span></span>
                 </button>
                 <ul class="nav-menu">
-                    <li><a href="class-schedule.html">Class Schedule</a></li>
+                    <li><a href="no-sweat-intro.html">No-Sweat Intro</a></li>
                     <li><a href="pricing.html">Pricing</a></li>
-                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="foundations.html">Foundations</a></li>
                     <li><a href="drop-in.html">Drop-In</a></li>
-                    <li><a href="location.html">Location</a></li>
+                    <li class="nav-dropdown">
+                        <a href="#" class="dropdown-toggle">Our Gym <span class="dropdown-arrow">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="coaches.html">Coaches</a></li>
+                            <li><a href="class-schedule.html">Class Schedule</a></li>
+                            <li><a href="success-stories.html">Success Stories</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="#" class="dropdown-toggle">Programs <span class="dropdown-arrow">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="crossfit-classes.html">CrossFit Classes</a></li>
+                            <li><a href="personal-training.html">Personal Training</a></li>
+                            <li><a href="nutrition-coaching.html">Nutrition Coaching</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                     <li><a href="book-a-free-intro.html" class="cta-button">Book a Free Intro</a></li>
                 </ul>
             </div>
@@ -55,25 +72,43 @@
         <section class="page-header">
             <div class="container">
                 <h1>Class Schedule</h1>
+                <h2>View our weekly class times and reserve your spot. All classes are coached and scalable to your fitness level.</h2>
             </div>
         </section>
 
+        <!-- Live Schedule Widget Section -->
+        <section class="schedule-widget-section">
+            <div class="container">
+                <h2>Reserve Your Class</h2>
+                <p class="section-intro">Book your spot in advance using our online system. Members can reserve classes up to 7 days in advance.</p>
+                <div class="schedule-widget-wrapper">
+                    <!-- PushPress or Wodify schedule widget would be embedded here -->
+                    <div class="schedule-widget-placeholder">
+                        <p>Schedule widget will be embedded here</p>
+                        <p class="widget-note">Connect your PushPress or Wodify account to display live class schedule and reservations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Class Times Section -->
         <section class="schedule-section">
             <div class="container">
-                <h2>SCHEDULE</h2>
+                <h2>Typical Class Times</h2>
+                <p class="section-intro">Our schedule may vary slightly. Always check the live schedule above for the most current times and availability.</p>
                 <div class="schedule-grid">
                     <div class="schedule-card">
                         <h3>CrossFit</h3>
                         <div class="schedule-times">
                             <h4>Monday – Friday</h4>
-                            <p>5:00 and 6:00am</p>
-                            <p>9:00 and 10:00am</p>
-                            <p>4:30, 5:30*, and 6:30pm*</p>
-                            <p class="note">*No 5:30 and 6:30pm class on Fridays</p>
+                            <p>5:00 AM and 6:00 AM</p>
+                            <p>9:00 AM and 10:00 AM</p>
+                            <p>4:30 PM, 5:30 PM*, and 6:30 PM*</p>
+                            <p class="note">*No 5:30 PM and 6:30 PM class on Fridays</p>
                         </div>
                         <div class="schedule-times">
                             <h4>Saturday</h4>
-                            <p>8:00am and 9:00am</p>
+                            <p>8:00 AM and 9:00 AM</p>
                         </div>
                     </div>
 
@@ -81,7 +116,7 @@
                         <h3>Barbell</h3>
                         <div class="schedule-times">
                             <h4>Saturday</h4>
-                            <p>6:30am</p>
+                            <p>6:30 AM</p>
                         </div>
                     </div>
 
@@ -89,7 +124,7 @@
                         <h3>Endurance</h3>
                         <div class="schedule-times">
                             <h4>Tuesday and Thursday</h4>
-                            <p>9:00am</p>
+                            <p>9:00 AM</p>
                         </div>
                     </div>
 
@@ -97,33 +132,46 @@
                         <h3>Open Gym</h3>
                         <div class="schedule-times">
                             <h4>Monday – Friday</h4>
-                            <p>2:30-4:30</p>
+                            <p>2:30 PM - 4:30 PM</p>
                         </div>
+                        <p class="open-gym-note">Self-directed training time. Coaches available for questions.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Form Section -->
-        <section class="contact-form-section">
+        <!-- How to Reserve Section -->
+        <section class="reserve-instructions">
             <div class="container">
-                <div class="form-wrapper">
-                    <iframe 
-                        src="https://api.grow.pushpress.com/widget/form/uy52Xa6CPygNF6jZcVHU" 
-                        title="Get a Free Consultation Form"
-                        class="contact-form-iframe">
-                    </iframe>
+                <h2>How to Reserve a Class</h2>
+                <div class="instructions-grid">
+                    <div class="instruction-step">
+                        <div class="step-number">1</div>
+                        <h3>Sign Up for Membership</h3>
+                        <p>Become a member to access our class reservation system.</p>
+                        <a href="pricing.html" class="btn btn-outline">View Pricing →</a>
+                    </div>
+                    <div class="instruction-step">
+                        <div class="step-number">2</div>
+                        <h3>Download the App</h3>
+                        <p>Get the PushPress app (or your gym's app) to reserve classes on the go.</p>
+                    </div>
+                    <div class="instruction-step">
+                        <div class="step-number">3</div>
+                        <h3>Reserve Your Spot</h3>
+                        <p>Book classes up to 7 days in advance. Same-day reservations available if spots remain.</p>
+                    </div>
                 </div>
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <h3>Location</h3>
-                        <p>825 UT-193</p>
-                        <p>Layton, UT 84041</p>
-                    </div>
-                    <div class="contact-item">
-                        <h3>Schedule a Free Intro</h3>
-                        <a href="book-a-free-intro.html" class="btn btn-primary">Get Started</a>
-                    </div>
+            </div>
+        </section>
+
+        <!-- New Member CTA Section -->
+        <section class="schedule-cta">
+            <div class="container">
+                <h2>New to Wasatch CrossFit?</h2>
+                <p class="cta-subheadline">Start with a free No-Sweat Intro to learn about our classes, meet a coach, and see if we're a good fit.</p>
+                <div class="section-cta">
+                    <a href="no-sweat-intro.html" class="btn btn-primary btn-large">Book My Free No-Sweat Intro →</a>
                 </div>
             </div>
         </section>
